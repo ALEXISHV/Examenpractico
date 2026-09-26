@@ -3,30 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAHV Tienda en línea</title>
+  <title>CAHV | Moda y tecnología</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/Styles.css">
 </head>
 <body>
 
+  <div class="announcement-bar">
+    <span>ENVÍO GRATIS EN COMPRAS MAYORES A $999</span>
+    <a href="#destacados">Descubre la selección <span aria-hidden="true">↗</span></a>
+  </div>
+
   <!--BARRA SUPERIOR-->
   <header class="topbar py-3 border-bottom">
     <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
       <a href="#inicio" class="brand d-flex align-items-center text-decoration-none">
-        <span class="brand-box brand-dark">CA</span><span class="brand-box brand-accent">HV</span>
+        <span class="brand-name">CAHV<span class="brand-period">.</span></span>
+        <span class="brand-tagline">OBJETOS PARA VIVIR MEJOR</span>
       </a>
 
       <form class="search-form flex-grow-1 mx-lg-4 d-none d-md-flex" role="search">
-        <input class="form-control" type="search" placeholder="Buscar productos...">
+        <input class="form-control" type="search" placeholder="Busca ropa, audífonos, tenis..." aria-label="Buscar productos">
         <button class="btn search-btn" type="submit">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>
         </button>
       </form>
 
       <div class="contact-info text-end small">
-        <span class="text-muted d-block">Servicio al cliente</span>
+        <span class="text-muted d-block">¿Necesitas ayuda?</span>
         <strong>+52 961 611 2345</strong>
       </div>
     </div>
@@ -42,7 +48,7 @@
         <li><a class="dropdown-item" href="#categorias">Ropa</a></li>
         <li><a class="dropdown-item" href="#categorias">Electrónica</a></li>
         <li><a class="dropdown-item" href="#categorias">Calzado</a></li>
-        <li><a class="dropdown-item" href="#categorias">Belleza</a></li>
+          <li><a class="dropdown-item" href="#categorias">Belleza</a></li>
       </ul>
 
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
@@ -53,103 +59,109 @@
         <ul class="navbar-nav main-links gap-lg-4">
           <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="#destacados">Tienda</a></li>
-          <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
-          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
+          <li class="nav-item"><a class="nav-link" href="#beneficios">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
         </ul>
       </div>
 
       <div class="nav-icons ms-lg-3">
-        <a href="#" aria-label="Favoritos">Favoritos<sup>0</sup></a>
-        <a href="#" aria-label="Carrito">Carrito<sup>0</sup></a>
+        <a href="#destacados" aria-label="Ver favoritos">♡ <span>Favoritos</span><sup>0</sup></a>
+        <a href="#destacados" aria-label="Ver bolsa de compras">
+          <svg class="bag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 7h12l1 10H3L4 7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Bolsa</span><sup>0</sup>
+        </a>
       </div>
     </div>
   </nav>
 
-  <!--HERO + BANNERS DE OFERTA-->
-  <section id="inicio" class="hero-section py-4">
-    <div class="container">
-      <div class="row g-3">
-        <div class="col-lg-8">
-          <div id="carruselHero" class="carousel slide hero-carousel" data-bs-ride="carousel">
-            <div class="carousel-inner rounded-4 overflow-hidden">
-              <div class="carousel-item active">
-                <img src="img/carrusel-2.jpg" class="d-block w-100" alt="Moda femenina, mujer con bolsas de compra">
-                <div class="carousel-caption text-start">
-                  <h1>Moda Femenina</h1>
-                  <p class="d-none d-md-block">Prendas pensadas para acompañar tu día a día, con la calidad que buscas al mejor precio.</p>
-                  <a href="#destacados" class="btn btn-outline-light btn-lg mt-2">Comprar</a>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="img/carrusel-1.jpg" class="d-block w-100" alt="Moda masculina, estilo urbano">
-                <div class="carousel-caption text-start">
-                  <h1>Estilo Urbano</h1>
-                  <p class="d-none d-md-block">Colores y texturas para destacar en cualquier lugar.</p>
-                  <a href="#destacados" class="btn btn-outline-light btn-lg mt-2">Comprar</a>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="img/carrusel-3.jpg" class="d-block w-100" alt="Moda infantil">
-                <div class="carousel-caption text-start">
-                  <h1>Colección Kids</h1>
-                  <p class="d-none d-md-block">Ropa cómoda y divertida para los más pequeños.</p>
-                  <a href="#destacados" class="btn btn-outline-light btn-lg mt-2">Comprar</a>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carruselHero" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carruselHero" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="0" class="active"></button>
-              <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="2"></button>
-            </div>
+  <main>
+    <section id="inicio" class="hero-section">
+      <div class="container">
+        <div class="hero-intro">
+          <div>
+            <span class="section-kicker">CAHV / SELECCIÓN DE TEMPORADA</span>
+            <h1>Lo que llevas.<br><span>Lo que te mueve.</span></h1>
           </div>
+          <p>Estilo para expresarte. Tecnología para llegar más lejos. Encuentra algo que se sienta muy tuyo.</p>
         </div>
 
-        <div class="col-lg-4 d-flex flex-column gap-3">
-          <div class="oferta-card rounded-4 flex-fill" style="background-image:url('img/oferta-2.jpg')">
-            <span class="badge-oferta">AHORRA 20%</span>
-            <h3>Ofertas de temporada</h3>
-            <a href="#destacados" class="btn btn-warning btn-sm">Comprar</a>
-          </div>
-          <div class="oferta-card rounded-4 flex-fill" style="background-image:url('img/oferta-1.jpg')">
-            <span class="badge-oferta">AHORRA 30%</span>
-            <h3>Ofertas especiales</h3>
-            <a href="#destacados" class="btn btn-warning btn-sm">Comprar</a>
-          </div>
+        <div class="hero-grid">
+          <article class="hero-fashion-card">
+            <div id="carruselHero" class="carousel slide hero-fashion-carousel" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/carrusel-2.jpg" alt="Colección de moda CAHV para la nueva temporada">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/carrusel-1.jpg" alt="Estilo urbano de la colección CAHV">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/carrusel-3.jpg" alt="Moda infantil de la colección CAHV">
+                </div>
+              </div>
+              <button class="carousel-control-prev hero-carousel-arrow" type="button" data-bs-target="#carruselHero" data-bs-slide="prev" aria-label="Imagen anterior">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next hero-carousel-arrow" type="button" data-bs-target="#carruselHero" data-bs-slide="next" aria-label="Imagen siguiente">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+              <div class="carousel-indicators hero-indicators">
+                <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="0" class="active" aria-label="Ver imagen 1" aria-current="true"></button>
+                <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="1" aria-label="Ver imagen 2"></button>
+                <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="2" aria-label="Ver imagen 3"></button>
+              </div>
+            </div>
+            <div class="hero-fashion-copy">
+              <span class="hero-card-kicker">01 / MODA · NUEVA TEMPORADA</span>
+              <h2>Tu estilo<br>abre camino.</h2>
+              <a class="hero-link" href="#categorias">Explorar ropa <span aria-hidden="true">↗</span></a>
+            </div>
+            <span class="hero-index">COLECCIÓN 2026</span>
+          </article>
+
+          <article class="hero-tech-card">
+            <div class="hero-tech-copy">
+              <span class="hero-card-kicker">02 / TECNOLOGÍA</span>
+              <h2>Ideas que<br>se conectan.</h2>
+              <a class="hero-link" href="#destacados">Ver tecnología <span aria-hidden="true">↗</span></a>
+            </div>
+            <img src="img/product-1.jpg" alt="Cámara Canon de la colección de tecnología">
+            <span class="tech-stamp">TECH<br>EDIT</span>
+          </article>
         </div>
       </div>
+    </section>
+
+    <div class="brand-ribbon" aria-hidden="true">
+      <div class="brand-ribbon-track">
+        <div class="brand-ribbon-group"><span>CAHV SELECTS</span><i>✳</i><span>VÍSTETE</span><i>✳</i><span>CONÉCTATE</span><i>✳</i><span>EXPLORA</span><i>✳</i></div>
+        <div class="brand-ribbon-group"><span>CAHV SELECTS</span><i>✳</i><span>VÍSTETE</span><i>✳</i><span>CONÉCTATE</span><i>✳</i><span>EXPLORA</span><i>✳</i></div>
+      </div>
     </div>
-  </section>
 
   <!--BENEFICIOS-->
-  <section class="beneficios py-4">
+  <section id="beneficios" class="beneficios py-4">
     <div class="container">
       <div class="row g-3">
         <div class="col-6 col-lg-3">
           <div class="beneficio-item">
-            <p>Mejor calidad</p>
+            <span class="beneficio-icon" aria-hidden="true">✳</span><p>Calidad seleccionada</p>
           </div>
         </div>
         <div class="col-6 col-lg-3">
           <div class="beneficio-item">
-            <p>Envío gratis</p>
+            <span class="beneficio-icon" aria-hidden="true">↗</span><p>Envío gratis desde $999</p>
           </div>
         </div>
         <div class="col-6 col-lg-3">
           <div class="beneficio-item">
-            <p>Devolución de 30 días</p>
+            <span class="beneficio-icon" aria-hidden="true">30</span><p>30 días para devolver</p>
           </div>
         </div>
         <div class="col-6 col-lg-3">
           <div class="beneficio-item">
-            <p>Soporte 24/7</p>
+            <span class="beneficio-icon" aria-hidden="true">24</span><p>Atención cercana</p>
           </div>
         </div>
       </div>
@@ -159,14 +171,15 @@
   <!--CATEGORÍAS -->
   <section id="categorias" class="categorias py-4">
     <div class="container">
-      <h2 class="seccion-titulo">Categorías</h2>
+      <span class="section-kicker">ENCUENTRA TU PRÓXIMO FAVORITO</span>
+      <h2 class="seccion-titulo">Compra por categoría</h2>
       <div class="row g-3">
         <div class="col-6 col-lg-3">
           <a href="#destacados" class="categoria-card">
             <img src="img/cat-1.jpg" alt="Ropa">
             <div>
               <strong>Ropa</strong>
-              <span>100 productos</span>
+              <span>Encuentra tu próximo favorito</span>
             </div>
           </a>
         </div>
@@ -175,7 +188,7 @@
             <img src="img/cat-2.jpg" alt="Electrónica">
             <div>
               <strong>Electrónica</strong>
-              <span>100 productos</span>
+              <span>Tecnología para tu día</span>
             </div>
           </a>
         </div>
@@ -184,7 +197,7 @@
             <img src="img/cat-3.jpg" alt="Calzado">
             <div>
               <strong>Calzado</strong>
-              <span>100 productos</span>
+              <span>Camina a tu manera</span>
             </div>
           </a>
         </div>
@@ -193,7 +206,7 @@
             <img src="img/cat-4.jpg" alt="Belleza">
             <div>
               <strong>Belleza</strong>
-              <span>100 productos</span>
+              <span>Pequeños grandes detalles</span>
             </div>
           </a>
         </div>
@@ -204,11 +217,13 @@
   <!--PRODUCTOS DESTACADOS-->
   <section id="destacados" class="destacados py-4">
     <div class="container">
-      <h2 class="seccion-titulo">Productos destacados</h2>
+      <span class="section-kicker">UNA BUENA MEZCLA</span>
+      <h2 class="seccion-titulo">Favoritos de la tienda</h2>
       <div class="row g-3">
 
         <div class="col-6 col-lg-3">
           <div class="producto-card">
+            <span class="producto-tag tag-tech">TECH PICK</span>
             <img src="img/product-1.jpg" alt="Cámara fotográfica Canon">
             <h5>Cámara fotográfica Canon</h5>
             <p class="precios"><span class="precio-actual">$12,500.00</span> <span class="precio-anterior">$15,000.00</span></p>
@@ -218,6 +233,7 @@
 
         <div class="col-6 col-lg-3">
           <div class="producto-card">
+            <span class="producto-tag tag-style">ESTILO</span>
             <img src="img/product-2.jpg" alt="Blusa azul">
             <h5>Blusa azul</h5>
             <p class="precios"><span class="precio-actual">$250.00</span> <span class="precio-anterior">$400.00</span></p>
@@ -227,6 +243,7 @@
 
         <div class="col-6 col-lg-3">
           <div class="producto-card">
+            <span class="producto-tag tag-home">PARA TU ESPACIO</span>
             <img src="img/product-3.jpg" alt="Lámpara de mesa">
             <h5>Lámpara de mesa</h5>
             <p class="precios"><span class="precio-actual">$1,250.00</span> <span class="precio-anterior">$2,300.00</span></p>
@@ -236,6 +253,7 @@
 
         <div class="col-6 col-lg-3">
           <div class="producto-card">
+            <span class="producto-tag tag-style">MÁS ELEGIDOS</span>
             <img src="img/product-4.jpg" alt="Tenis Nike">
             <h5>Tenis Nike</h5>
             <p class="precios"><span class="precio-actual">$799.00</span> <span class="precio-anterior">$993.00</span></p>
@@ -246,6 +264,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!--FOOTER-->
   <footer id="contacto" class="footer pt-5 pb-4">
@@ -263,8 +283,8 @@
           <ul class="footer-links list-unstyled">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#destacados">Tienda</a></li>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#categorias">Categorías</a></li>
+            <li><a href="#beneficios">Nosotros</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
