@@ -9,16 +9,14 @@
 
 * { box-sizing: border-box; }
 body { color: var(--ink); background: #fff; font-family: 'DM Sans', sans-serif; -webkit-font-smoothing: antialiased; }
-h1, h2, h3, h5, .brand-name { font-family: 'Outfit', sans-serif; }
+h1, h2, h3, h5 { font-family: 'Outfit', sans-serif; }
 
 .announcement-bar { min-height: 34px; display: flex; justify-content: center; align-items: center; gap: .65rem; padding: .4rem 1rem; color: #fff; background: var(--ink); font-size: .67rem; font-weight: 700; letter-spacing: .08em; text-align: center; }
 .announcement-bar a { color: var(--lime); font-weight: 500; letter-spacing: 0; text-decoration: none; }
 .announcement-bar a span { margin-left: .2rem; }
 .topbar { padding: 1.1rem 0 !important; border-color: var(--line) !important; }
-.brand { flex-direction: column; align-items: flex-start !important; line-height: 1; }
-.brand-name { color: var(--ink); font-size: 2rem; font-weight: 800; }
-.brand-period { color: var(--coral); }
-.brand-tagline { margin-top: .2rem; color: var(--muted); font-size: .53rem; font-weight: 700; letter-spacing: .12em; }
+.brand { align-items: center !important; line-height: 1; }
+.brand-logo { display: block; width: auto; height: 70px; }
 .search-form { max-width: 490px; }
 .search-form .form-control { min-height: 46px; padding: .7rem 1rem; border: 1px solid var(--line); border-right: 0; border-radius: 3px 0 0 3px; background: var(--paper); font-size: .88rem; box-shadow: none; }
 .search-form .form-control:focus { border-color: var(--ink); background: #fff; }
@@ -126,7 +124,7 @@ h1, h2, h3, h5, .brand-name { font-family: 'Outfit', sans-serif; }
 @media (max-width: 767.98px) {
   .announcement-bar { flex-wrap: wrap; gap: .15rem .55rem; font-size: .6rem; }
   .topbar { padding: .85rem 0 !important; }
-  .brand-name { font-size: 1.7rem; }
+  .brand-logo { height: 56px; }
   .contact-info { font-size: .75rem !important; }
   .nav-strip > .container { flex-wrap: wrap; gap: .5rem; }
   .nav-strip .navbar-toggler { padding: .35rem .55rem; border-color: var(--line); }
